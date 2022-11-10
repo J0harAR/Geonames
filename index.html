@@ -149,7 +149,7 @@
                 $('#estado').empty();
                    $.each(data.records, function(i,item){
                    	console.log(item)
-                    $('#estado').prepend('<option value="'+item.fields.admin_name+'">'+item.fields.admin_name1+'</option>'); 
+                    $('#estado').prepend('<option value="'+item.fields.admin_name1+'">'+item.fields.admin_name1+'</option>'); 
                     $('#localidad').prepend('<option value="'+item.fields.admin_name2+'">'+item.fields.admin_name2+'</option>');   
                     $('#municipio').prepend('<option value="'+item.fields.admin_name2+'">'+item.fields.admin_name2+'</option>'); 
                     $('#georeferencia').prepend('<option value="'+item.fields.coordinates+'">'+item.fields.coordinates+'</option>');            
