@@ -13,7 +13,7 @@
     <div class="col-md-4">
       <label for="validationCustom04" class="form-label">Pais</label>
       <select class="form-select" id="pais" name="pais">
-        
+        <option value="MX">Mexico</option>
       </select>
       
     </div>
@@ -76,32 +76,6 @@
 <script type="text/javascript">
 	$('#monito').hide();
 	
-
-	$('#pais').blur(function(e) {
-            
-
-            $.ajax({  
-             type: "GET",  
-             url: "https://data.opendatasoft.com/api/records/1.0/search/?dataset=geonames-postal-code%40public&q=&facet=country_code&refine.country_code=MX", 
-             dataType: "json", 
-             beforeSend: function() {
-                 $('#monito').show();
-              },
-              complete: function(){
-                 $('#monito').hide();
-              },
-             success: function (data) {  
-                $('#pais').empty();
-                   $.each(data.records, function(i,item){
-                   	
-                    $('#pais').prepend('<option value="'+item.fields.country_code+'">'+item.fields.admin_name1+'</option>'); 
-                });
-             }, //End of AJAX Success function  
-         }); 
-
-    })
-
-
 
 
 
